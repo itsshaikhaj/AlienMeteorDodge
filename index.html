@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien Meteor Dodge</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            background-color: #000;
+            border: 1px solid #fff;
+        }
+        #restartButton {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #instructions {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #instructions h2 {
+            margin-bottom: 10px;
+        }
+        #instructions ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #instructions li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="instructions">
+        <h2>Instructions</h2>
+        <p>Use the left and right arrow keys to move your alien ship.</p>
+        <p>Avoid the red meteors to survive!</p>
+        <p>Collect green meteors for points.</p>
+        <p>Watch out for special meteors with power-ups:</p>
+        <ul>
+            <li><strong>🚫 Red Meteor:</strong> Avoid to survive!</li>
+            <li><strong>💚 Green Meteor:</strong> Collect for points.</li>
+            <li><strong>🔵 Blue Meteor:</strong> Slows down the game.</li>
+            <li><strong>🟣 Purple Meteor:</strong> Attracts collectible meteors.</li>
+            <li><strong>🟠 Orange Meteor:</strong> Gives you a speed boost and shield.</li>
+        </ul>
+        <p>Good luck!</p>
+    </div>
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+    <button id="restartButton">Restart Game</button>
+    <script src="game.js"></script>
+</body>
+</html>
